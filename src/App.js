@@ -1,24 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Lines } from 'react-preloaders';
 import './App.css';
-
+import NavBar from './Secciones/NavBar';
+import Header from './Secciones/Header';
+import Maestros from './Secciones/Maestros';
+import Suscripciones from './Secciones/Suscripciones'
+import Nosotros from './Secciones/Nosotros';
+import Galeria from './Secciones/Galeria';
+import Contacto from './Secciones/Contacto';
+import Footer from './Secciones/Footer';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <React.Fragment>
+        <Lines
+          color={'#f7f7f7'} //Default #2D2D2D
+          bgColor={'#222'} //Default #F7F7F7
+          time={1500} //Default #1300
+
+        />
+        <div className="App">
+          <NavBar />
+          <div className="dx-main">
+            <Header />
+            <Maestros />
+            <div className="dx-separator">
+              <div className="dx-separator-circle"></div>
+            </div>
+            <Suscripciones />
+            <div className="dx-separator">
+              <div className="dx-separator-circle"></div>
+            </div>
+            <Nosotros />
+            <Galeria />
+            <Contacto />
+            <Footer />
+          </div>
+        </div>
+      </React.Fragment>
     </div>
   );
 }
